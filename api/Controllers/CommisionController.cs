@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 namespace FCamara.CommissionCalculator.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class CommisionController : ControllerBase
     {
         [ProducesResponseType(typeof(CommissionCalculationResponse), 200)]
-        [HttpPost]
+        [HttpPost("Calculate")]
         public IActionResult Calculate(CommissionCalculationRequest calculationRequest)
         {
             try
